@@ -1,0 +1,26 @@
+-if directmessage.user == current_user
+  .my-message
+    .message-detail{data: {message: {id: directmessage.id}}}
+      .message-detail__user-name
+        = directmessage.user.name
+      .message-detail__date
+        = directmessage.created_at.strftime("%m/%d %H:%M")
+    .my-message-main
+      - if directmessage.content.present?
+        %p.message-main__content
+          = directmessage.content
+      = image_tag directmessage.image.url, class: 'message__image' if directmessage.image.present?
+-else
+  .message
+    .user-image
+      = image_tag directmessage.user.image, class: 'image'
+    .message-main
+      - if directmessage.content.present?
+        %p.message-main__content
+          = directmessage.content
+      = image_tag directmessage.image.url, class: 'message__image' if directmessage.image.present?
+    .message-detail{data: {message: {id: directmessage.id}}}
+      .message-detail__user-name
+        = directmessage.user.name
+      .message-detail__date
+        = directmessage.created_at.strftime("%m/%d %H:%M")

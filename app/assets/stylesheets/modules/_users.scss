@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+}
+body{
+  float: left;
+  .wrapper{
+    display: flex;
+    width: 100vw;
+    .side-bar{
+      height: 100vh;
+      width: 6vw;
+      background-color: #3f4663;
+      .icon-box{
+        height: 50vh;
+        width: 6vw;
+        margin-top: 3vh;
+        &__btn{
+          font-size: 35px;
+          text-align: center;
+          padding-bottom: 2vh;
+          .btn-icon{
+            color: #6a7893;
+            &:hover {
+              color: #9da9c1;
+            }
+          }
+          .light{
+            color: #d3d8e3;
+          }
+        }
+      }
+    }
+    .friends-bar{
+      height: 100vh;
+      width: 35vw;
+      overflow-y: scroll;
+      .friends-box_title{
+        height: 6vh;
+        width: 35vw;
+        background-color: #fbfbfd;
+        border-bottom: solid 1px #dfdfdf;
+        padding-left: 1.5vw;
+        font-size: 12px;
+        font-style: italic;
+        font-family: 'Hiragino Maru Gothic ProN';
+        color: #6a6a6a;
+        p{
+          line-height: 6vh;
+        }
+      }
+      .rooms-box_title{
+        height: 8vh;
+        width: 35vw;
+        background-color: #3f4663;
+        padding-left: 2vw;
+        border-left: solid 1px #6a7893;
+        p{
+          line-height: 8vh;
+          font-size: 20px;
+          .btn-icon{
+            color: #6a7893;
+            &:hover {
+              color: #9da9c1;
+            }
+          }
+        }
+      }
+      .friends-box_name{
+        height: 12vh;
+        width: 35vw;
+        border-bottom: solid 1px #dfdfdf;
+        padding-left: 1.5vw;
+        font-size: 14px;
+        display: flex;
+        position: relative;
+        &:hover {
+          background-color: #e9ebf2;
+        }
+        .name{
+          line-height: 12vh;
+          font-family: 'Hiragino Maru Gothic ProN';
+          text-decoration: none;
+          color: #3f3f3f;
+          &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: auto;
+            content: "";
+            background-color: transparent;
+          }
+        }
+        .box{
+          height: 12vh;
+          width: 26vw;
+          display: flex;
+          justify-content: space-between;
+          .following-btn{
+            z-index: 2;
+            line-height: 12vh;
+            font-size: 25px;
+            color: #AFAFAF;
+            text-decoration: none;
+          }
+        }
+        .user-image {
+          display: inline-block;
+          width: 7.5vh;
+          height: 7.5vh;
+          position: relative;
+          overflow: hidden;
+          border-radius: 50%;
+          margin: 2.5vh 1vw 0 0;
+          background-color: #3f3f3f;
+          .image{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 7.5vh;
+          }
+        }
+      }
+    }
+    .right-bar{
+      height: 100vh;
+      width: calc(100% - 41vw);
+      .talkindex-background{
+        height: 100vh;
+        width: 100%;
+        background-color: #4ed942;
+        color: white;
+        font-family: 'Comic Sans MS';
+        letter-spacing: 2px;
+        padding-top: 10vh;
+        border-left: solid 1px #dfdfdf;
+        .talkindex-text1{
+          font-size: 60px;
+          margin-left: 5vw;
+        }
+        .talkindex-text2{
+          font-size: 100px;
+          margin-left: 15vw;
+          margin-top: 10vh;
+        }
+        .talkindex-image{
+          margin: 0 auto;
+          width: 30vw;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+      .postboard-hedder{
+        height: 8vh;
+        width: 100%;
+        background-color: #3f4663;
+        border-left: solid 1px #6a7893;
+        font-family: 'HiraKakuPro-W6';
+        line-height: 8vh;
+        padding: 0 2vw;
+        display: flex;
+        justify-content: space-between;
+        color: #d3d8e3;
+        .btn-icon{
+          font-size: 20px;
+          color: #6a7893;
+          &:hover {
+            color: #9da9c1;
+          }
+        }
+      }
+      .postboard{
+        height: 87vh;
+        width: 100%;
+        border-bottom: solid 1px #dfdfdf;
+        overflow-y: scroll;
+        padding: 20px 10px;
+        background-image: url(line27.jpg);
+        background-size: cover;
+        background-blend-mode: screen;
+        background-color: #86a3c1;
+        border-left: solid 1px #dfdfdf;
+        .user-image {
+          display: inline-block;
+          width: 4vw;
+          height: 4vw;
+          position: relative;
+          overflow: hidden;
+          border-radius: 50%;
+          margin-top: 1;
+          background-color: #3f3f3f;
+          margin-top: 1vw;
+          .image{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            width: 4vw;
+          }
+        }
+        .my-message{
+          display: flex;
+          justify-content: flex-end;
+        }
+        .message{
+          display: flex;
+        }
+        .message-detail{
+          font-size: 10px;
+          color: white;
+          margin-top: 2vw;
+        }
+        .message-main{
+          font-size: 15px;
+          background-color: #eceef3;
+          padding: 1vw;
+          margin: 1vw;
+          border-radius: 1vw;
+          display: inline-block;
+          position: relative; 
+          max-width: 40vw;
+          &:after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0; 
+            left: -1.4vw;
+            border: 8px solid transparent;
+            border-right: 18px solid #eceef3;
+            -webkit-transform: rotate(35deg);
+            transform: rotate(35deg);
+          }
+          .message__image{
+            width: 10vw;
+          }
+        }
+        .my-message-main{
+          font-size: 15px;
+          background-color: #c1f18d;
+          padding: 1vw;
+          margin: 1vw;
+          border-radius: 2vw;
+          display: inline-block;
+          position: relative; 
+          max-width: 40vw;
+          &:after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: 0; 
+            right: -1.4vw;
+            border: 8px solid transparent;
+            border-left: 18px solid #c1f18d;
+            -webkit-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+          }
+          .message__image{
+            width: 10vw;
+          }
+        }
+      }
+      .postboard-footer{
+        position: absolute;
+        height: 5vh;
+        padding-left: 1vw;
+        color: #3f4663;
+        .new-message{
+          display: flex;
+          height: 5vh;
+          width: 100%;
+          .form__message{
+            width: 47vw;
+            border-radius: 20px;
+            border: solid 1px #dfdfdf;
+          }
+          .form__box{
+            font-size: 30px;
+            line-height: 5vh;
+            margin-right: 1vw;
+            margin-left: 1vw;
+          }
+          .hidden{
+            display: none;
+          }
+        }
+      }
+      .upper-box{
+        height: 66vh;
+        width: 100%;
+        background-image: url("line10.jpg");
+        background-size: cover;
+        box-shadow: -5px -5px 20vh #6a6a6a inset;
+        .user-box{
+          height: 50vw;
+          width: 40vh;
+          margin: 0 auto;
+          .user-image {
+            margin-top: 10vh;
+            display: inline-block;
+            width: 40vh;
+            height: 40vh;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #3f3f3f;
+            .image{
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+              width: 40vh;
+            }
+          }
+          & p{
+            text-align: center;
+            padding-top: 3vh;
+            font-family: 'HiraKakuPro-W6';
+            font-size: 35px;
+            color: white;
+          }
+        }
+      }
+      .middle-box{
+        height: 14vh;
+        width: 100%;
+        border-bottom: solid 1px #dfdfdf;
+        border-left: solid 1px #dfdfdf;
+        &__btn-box{
+          height: 14vh;
+          width: 30vw;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          font-size: 50px;
+          line-height: 14vh;
+          .btn-icon{
+            color: #3f4663;
+            &:hover {
+              color: #000000;
+            }
+          }
+        }
+      }
+      .lower-box{
+        height: 20vh;
+        width: 100%;
+        overflow-y: scroll;
+        border-left: solid 1px #dfdfdf;
+        .text-box{
+          height: 15vh;
+          width: 50vw;
+          margin: 0 auto;
+          padding: 2vh;
+          text-align: top;
+          color: #696969;
+          font-size: 20px;
+          .text-introduction{
+            color: #3f3f3f;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}

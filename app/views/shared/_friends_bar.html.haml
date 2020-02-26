@@ -1,0 +1,26 @@
+.friends-bar
+  .friends-box
+    .friends-box_title
+      %p プロフィール
+    .friends-box_name
+      .user-image
+        = image_tag current_user.image, class: 'image'
+      = link_to current_user.name, root_path, class: 'name'
+  .friends-box
+    .friends-box_title
+      %p 
+        = "グループ(#{current_user.groups.length})"
+    - current_user.groups.each do |group|
+      .friends-box_name
+        .user-image
+          = image_tag group.image, class: 'image'
+        = link_to "#{group.name}(#{group.users.length})", group_path(group), class: 'name'
+  .friends-box
+    .friends-box_title
+      %p 
+        = "友達(#{current_user.follow_count})"
+    - current_user.all_following.each do |follow|
+      .friends-box_name
+        .user-image
+          = image_tag follow.image, class: 'image'
+        = link_to follow.name, "/users/#{follow.id}", class: 'name'

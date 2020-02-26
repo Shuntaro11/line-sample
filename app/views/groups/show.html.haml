@@ -1,0 +1,20 @@
+.wrapper
+  = render "shared/side_bar1"
+  = render "shared/friends_bar"
+  .right-bar
+    .upper-box
+      .user-box
+        .user-image
+          = image_tag @group.image, class: 'image'
+        %p
+          = @group.name
+    .middle-box
+      .middle-box__btn-box
+        = link_to group_groupmessages_path(params[:id]), class: "btn-icon" do
+          = icon('fas', 'comment-dots')
+        = link_to edit_group_path(params[:id]), class: "btn-icon" do
+          = icon('fas', 'cog')
+        = link_to group_path(params[:id]), class: "btn-icon",method: :delete, data: { confirm: 'グループを削除しますか？' } do
+          = icon('far', 'trash-alt')
+    .lower-box
+      .text-box

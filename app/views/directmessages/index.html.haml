@@ -1,0 +1,23 @@
+.wrapper
+  = render "shared/side_bar2"
+  = render "shared/rooms_bar"
+  .right-bar
+    .postboard-hedder
+      - @friend.users.each do |user|
+        - if user != current_user
+          = user.name
+        -else
+    .postboard
+      .message-list
+        = render @directmessages
+    .postboard-footer
+      = form_for [@friend, @directmessage],html: { class: 'new-message'} do |f|
+        .form__box
+          = f.label :image do
+            = icon('far', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.text_field :content, class: 'form__message', placeholder: 'Aa'
+        .form__box
+          = f.label :"submit" do
+            = f.submit 'Send', class: 'form__submit hidden', id: "directmessage_submit"
+            = icon('fab','telegram-plane')

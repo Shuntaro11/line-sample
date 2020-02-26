@@ -1,0 +1,14 @@
+.side-bar
+  .icon-box
+    .icon-box__btn
+      = link_to root_path, class: "btn-icon light" do
+        = icon('fas', 'user')
+    .icon-box__btn
+      = link_to users_talkindex_path, class: "btn-icon" do
+        = icon('fas', 'comment-dots')
+    .icon-box__btn
+      = link_to search_users_path, class: "btn-icon" do
+        = icon('fas', 'user-plus')
+    .icon-box__btn
+      = link_to edit_user_path(current_user), class: "btn-icon" do
+        = icon('fas', 'cog')

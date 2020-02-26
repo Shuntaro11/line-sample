@@ -1,0 +1,149 @@
+.make-group{
+  .upper{
+    height: 8vh;
+    width: 100vw;
+    line-height: 8vh;
+    font-size: 20px;
+    text-align: center;
+    background-color: #3f4663;
+    color: #d3d8e3;
+    font-family: 'Hiragino Maru Gothic Pro';
+  }
+  .field-input{
+    margin: 0 auto;
+    margin-bottom: 2vh;
+    margin-top: 3vh;
+    width: 25vw;
+    position: relative;
+    .form{
+      height: 8vh;
+      width: 25vw;
+      border: solid 1px #dfdfdf;
+      border-radius: 2px;
+      font-family: 'Hiragino Maru Gothic Pro';
+      padding: 0 1vw;
+      outline: 0;
+      &::placeholder{
+        color: #B5B5B5;
+      }
+    }
+    .image{
+      position: absolute;
+      top: 0;
+      right: 1vw;
+      font-size: 25px;
+      line-height: 8vh;
+      .hidden{
+        display: none;
+      }
+    }
+  }
+  .friend-list{
+    overflow-y: scroll;
+    height: 55vh;
+    width: 30vw;
+    margin: 0 auto;
+    border: solid 1px #dfdfdf;
+    border-radius: 3px;
+    .friend-box{
+      width: 30vw;
+      height: 10vh;
+      margin: 0 auto;
+      display: flex;
+      border-bottom: solid 1px #dfdfdf;
+      .friend-image {
+        display: inline-block;
+        width: 8vh;
+        height: 8vh;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: #3f3f3f;
+        margin-top: 1vh;
+        margin-left: 1vw;
+        .image{
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          width: 8vh;
+        }
+      }
+      .friend-name{
+        font-size: 20px;
+        font-family: 'Hiragino Maru Gothic ProN';
+        line-height: 10vh;
+        margin-left: 1vw;
+      }
+      .round {
+        position: relative;
+        margin: 1vh 1.5vw 0 1vw;
+        & label {
+          background-color: #fff;
+          border: 1px solid #ccc;
+          border-radius: 50%;
+          cursor: pointer;
+          height: 3vh;
+          width: 3vh;
+          position: absolute;
+          left: 1vh;
+          top: 2.5vh;
+          &:after {
+            height: 5px;
+            width: 10px;
+            transform: rotate(-45deg);
+            position: absolute;
+            left: 0.5vh;
+            top: 0.7vh;
+            border: 2px solid #fff;
+            border-top: none;
+            border-right: none;
+            opacity: 0;
+            content: "";
+          }
+        }
+      }  
+      & input[type="checkbox"] {
+        visibility: hidden;
+        &:checked + label {
+          background-color: #66bb6a;
+          border-color: #66bb6a;
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  .button{
+    width: 15vw;
+    margin: 0 auto;
+    .btn {
+      display: inline-block;
+      width: 15vw;
+      height: 8vh;
+      line-height: 8vh;
+      color: white;
+      background-color: #b3b6c9;
+      text-align: center;
+      font-family: 'Hiragino Kaku Gothic Std';
+      text-decoration: none;
+      letter-spacing: 1px;
+      border: none;
+      border-radius: 2px;
+      margin-top: 2vh;
+      &:hover {
+        background-color: #647088;
+      }
+    }
+    .submit {
+      padding: 0 6.15vw;
+      background-color: #4ed942;
+      &:hover {
+        background-color: #46C33B;
+      }
+    }
+  }
+}

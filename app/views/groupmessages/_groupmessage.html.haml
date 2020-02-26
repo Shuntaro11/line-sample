@@ -1,0 +1,26 @@
+-if groupmessage.user == current_user
+  .my-message
+    .message-detail{data: {message: {id: groupmessage.id}}}
+      .message-detail__user-name
+        = groupmessage.user.name
+      .message-detail__date
+        = groupmessage.created_at.strftime("%m/%d %H:%M")
+    .my-message-main
+      - if groupmessage.content.present?
+        %p.message-main__content
+          = groupmessage.content
+      = image_tag groupmessage.image.url, class: 'message__image' if groupmessage.image.present?
+-else
+  .message
+    .user-image
+      = image_tag groupmessage.user.image, class: 'image'
+    .message-main
+      - if groupmessage.content.present?
+        %p.message-main__content
+          = groupmessage.content
+      = image_tag groupmessage.image.url, class: 'message__image' if groupmessage.image.present?
+    .message-detail{data: {message: {id: groupmessage.id}}}
+      .message-detail__user-name
+        = groupmessage.user.name
+      .message-detail__date
+        = groupmessage.created_at.strftime("%m/%d %H:%M")

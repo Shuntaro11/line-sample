@@ -1,0 +1,83 @@
+.account-page{
+  width: 100vw;
+  background-color: #e7e7eb;
+  .center-box{
+    height: 100vh;
+    width: 40vw;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5vh;
+    .edit_user{
+      height: 40vh;
+    }
+    p{
+      font-size: 100px;
+      font-family: 'arial black';
+      color: #4ed942;
+      margin-bottom: 1vh;
+      letter-spacing: -5px;
+    }
+    .field-input{
+      margin: 0 auto;
+      margin-bottom: 2vh;
+      width: 20vw;
+      position: relative;
+      .image{
+        position: absolute;
+        top: 0;
+        right: 1vw;
+        font-size: 25px;
+        line-height: 8vh;
+        .hidden{
+          display: none;
+        }
+      }
+    }
+    .action{
+      height: 10vh;
+    }
+  }
+  h1{
+    padding-bottom: 2vh;
+  }
+  .btn {
+    display: inline-block;
+    height: 8vh;
+    line-height: 8vh;
+    letter-spacing: 1px;
+    padding: 0 6vw;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    background-color: #b3b6c9;
+    font-family: 'Hiragino Kaku Gothic Std';
+    color: white;
+    text-decoration: none;
+    &.upbtn{
+      width: 15vw;
+      padding:0;
+      &:hover {
+        background-color: #647088;
+      }
+    }
+    &.lowbtn{
+      background-color: #4ed942;
+      &:hover {
+        background-color: #46C33B;
+      }
+    }
+  }
+  input.form{
+    height: 8vh;
+    width: 20vw;
+    border: none;
+    outline: 0;
+    border-radius: 2px;
+    font-family: 'Hiragino Maru Gothic Pro';
+    padding: 0 1vw;
+    &::placeholder{
+      color: #B5B5B5;
+    }
+  }
+  
+}

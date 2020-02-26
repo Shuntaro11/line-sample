@@ -1,0 +1,24 @@
+.make-group
+  .upper
+    %p グループ作成
+  = form_for @group do |f|
+    .field-input
+      = f.text_field :name, autofocus: true,placeholder: "グループ名", class: 'form'
+      .form__mask
+        = f.label :image, class: 'image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+    .friend-list
+      - @users.each do |user|
+        .friend-box
+          .round
+            = f.check_box :user_ids, {multiple: true, class: "check_box"}, user.id, nil
+            %label{ for: "group_user_ids_#{user.id}"}
+          .friend-image
+            = image_tag user.image, class: 'image'
+          .friend-name
+            = user.name
+    .button
+      = f.submit "作成", class: "btn submit"
+  .button
+    = link_to "もどる", :back, class: 'btn'

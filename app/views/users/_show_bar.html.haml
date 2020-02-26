@@ -1,0 +1,29 @@
+.right-bar
+  .upper-box
+    .user-box
+      .user-image
+        = image_tag @user.image, class: 'image'
+      %p
+        = @user.name
+  .middle-box
+    .middle-box__btn-box
+      - current_user.friends.each do |friend|
+        - friend.users.each do |friend_user|
+          - if friend_user.id == (params[:id].to_i)
+            - @friend_id = friend.id
+          - else
+      - if @friend_id
+        = link_to friend_directmessages_path(@friend_id), class: "btn-icon" do
+          = icon('fas', 'comment-dots')
+      - else
+        = link_to friends_path(params[:id]), method: :post , class: "btn-icon" do
+          = icon('fas', 'comment-medical')
+      = link_to "/users/#{current_user.id}/users/unfollow/#{params[:id]}",method: :put, class: "btn-icon", data: { confirm: '友だちから削除しますか？' } do
+        = icon('fas', 'user-minus')
+  .lower-box
+    .text-box
+      .text-box
+        .text-title
+          = "PR :"
+        .text-introduction
+          = "#{@user.content}"

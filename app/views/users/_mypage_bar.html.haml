@@ -1,0 +1,21 @@
+.right-bar
+  .upper-box
+    .user-box
+      .user-image
+        = image_tag current_user.image, class: 'image'
+      %p
+        = current_user.name
+  .middle-box
+    .middle-box__btn-box
+      = link_to edit_user_path(current_user), class: "btn-icon" do
+        = icon('fas', 'cog')
+      = link_to new_group_path, class: "btn-icon" do
+        = icon('fas', 'users')
+      = link_to search_users_path, class: "btn-icon" do
+        = icon('fas', 'user-plus')
+  .lower-box
+    .text-box
+      .text-title
+        = "PR :"
+      .text-introduction
+        = "#{current_user.content}"

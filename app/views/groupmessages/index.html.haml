@@ -1,0 +1,22 @@
+.wrapper
+  = render "shared/side_bar2"
+  = render "shared/rooms_bar"
+  .right-bar
+    .postboard-hedder
+      = "#{@group.name}(#{@group.users.length})"
+      = link_to edit_group_path(params[:group_id]), class: "btn-icon" do
+        = icon('fas', 'user-plus')
+    .postboard
+      .message-list
+        = render @groupmessages
+    .postboard-footer
+      = form_for [@group, @groupmessage],html: { class: 'new-message'} do |f|
+        .form__box
+          = f.label :image do
+            = icon('far', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.text_field :content, class: 'form__message', placeholder: 'Aa'
+        .form__box
+          = f.label :"submit" do
+            = f.submit 'Send', class: 'form__submit hidden', id: "groupmessage_submit"
+            = icon('fab','telegram-plane')

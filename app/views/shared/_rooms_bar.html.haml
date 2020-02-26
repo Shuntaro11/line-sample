@@ -1,0 +1,31 @@
+.friends-bar
+  .friends-box
+    .rooms-box_title
+      %p
+        = link_to new_group_path, class: "btn-icon" do
+          = icon('fas', 'users')
+    - current_user.groups.each do |group|
+      .friends-box_name
+        .user-image
+          = image_tag group.image, class: 'image'
+        = link_to "#{group.name}(#{group.users.length})", group_groupmessages_path(group), class: 'name'
+  .friends-box
+    - current_user.friends.each do |friend|
+      - friend.users.each do |friend_user|
+        - if friend_user.id != current_user.id
+          .friends-box_name
+            .user-image
+              = image_tag friend_user.image, class: 'image'
+            - current_user.all_following.each do |following|
+              - if following.id == friend_user.id
+                - @already_following = "yes"
+              -else
+            -if @already_following == "yes"
+              = link_to friend_user.name, friend_directmessages_path(friend), class: 'name'
+              - @already_following = ""
+            -else
+              .box
+                = link_to friend_user.name, friend_directmessages_path(friend), class: 'name'
+                = link_to "/users/:id/users/follow/#{friend_user.id}", class: 'following-btn', method: :put do
+                  = icon('fas', 'user-plus')
+        - else

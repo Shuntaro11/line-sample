@@ -1,0 +1,13 @@
+.search-page
+  .upper
+    %p 友だち検索
+  .search-form
+    = form_tag(search_result_users_path, method: :get, id: 'search-form') do
+      .field-input
+        = email_field_tag :email, '',placeholder:"メールアドレス", class: 'form'
+        .form__mask
+          = label_tag :search, class: 'search' do
+            = icon('fas', 'search', class: 'icon')
+            = submit_tag "検索", class: 'hidden', id: 'search'
+    %h1
+      = link_to "HOME", root_path, class: 'btn'
