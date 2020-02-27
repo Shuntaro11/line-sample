@@ -1,24 +1,96 @@
-# README
+# TIME-SNS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+現代風SNSアプリ :envelope:
 
-Things you may want to cover:
+## 説明
 
-* Ruby version
+- メッセージ機能
+- フレンド検索機能
+- フォロー機能
+- グループ機能
+- 非同期通信での送信、更新
 
-* System dependencies
+# TIME-SNS DB設計
+## usersテーブル
+Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+|image|string|null: false|
+|content|text|null: false|
+### Association
+- has_many :group_users
+- has_many :groups, through:  :group_users
+- has_many :groupmessages
+- has_many :friend_users
+- has_many :friends, through: :friend_users
+- has_many :directmessages
+- has_many :follows
 
-* Configuration
+## groupsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|image|string|null: false|
+### Association
+- has_many :group_users
+- has_many :users, through:  :group_users
+- has_many :groupmessages
 
-* Database creation
+## group_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :group
 
-* Database initialization
+## groupmessagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string|
+|content|text|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to : group
 
-* How to run the test suite
+## friendsテーブル
+|Column|Type|Options|
+|------|----|-------|
+### Association
+- has_many :friend_users
+- has_many :users, through:  :friend_users
+- has_many :directmessages
 
-* Services (job queues, cache servers, search engines, etc.)
+## friend_usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|friend_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :friend
 
-* Deployment instructions
+## directmessagesテーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string|
+|content|text|
+|user_id|integer|null: false, foreign_key: true|
+|friend_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :friend
 
-* ...
+## followsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|followable_id|integer|null: false, foreign_key: true|
+|follower_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :followable
+- belongs_to :follower
