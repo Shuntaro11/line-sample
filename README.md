@@ -17,8 +17,8 @@ Column|Type|Options|
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|image|string|null: false|
-|content|text|null: false|
+|image|string|
+|content|text|
 ### Association
 - has_many :group_users
 - has_many :groups, through:  :group_users
@@ -32,7 +32,7 @@ Column|Type|Options|
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|image|string|null: false|
+|image|string|
 ### Association
 - has_many :group_users
 - has_many :users, through:  :group_users
