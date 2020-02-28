@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
 }
+.fontawe:after{
+  content:"\f061";
+  font-family: "Font Awesome";
+  font-weight:900;
+}
 body{
   float: left;
   .wrapper{
