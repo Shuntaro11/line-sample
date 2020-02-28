@@ -1,6 +1,14 @@
 * {
   box-sizing: border-box;
 }
+.fontawe:after{
+  display:block;
+  content:"\f061";
+  width:20px;
+  height:20px;
+  font-family: "Font Awesome 5 Free";
+  font-weight:900;
+}
 body{
   float: left;
   .wrapper{
