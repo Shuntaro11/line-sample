@@ -72,3 +72,4 @@ gem 'haml-rails'
 gem 'mini_magick'
 gem 'pry-rails'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'fog-aws'
