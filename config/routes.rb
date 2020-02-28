@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "users#index"
-  get 'users/talkindex', to: 'users#talkindex'
-  resources :users, only: [:index, :edit, :update, :show] do
+  resources :users, only: [:index, :show, :edit, :update] do
     member do
       put 'users/follow/:user_id', to: 'users#follow'
       put 'users/unfollow/:user_id', to: 'users#unfollow'
@@ -10,6 +9,7 @@ Rails.application.routes.draw do
     collection do
       get 'search'
       get 'search_result'
+      get 'talkindex'
     end
   end
 

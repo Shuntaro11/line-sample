@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   validates :name, presence: true
-  validates :password, length: { minimum: 7 }
   acts_as_followable # フォロワー機能
   acts_as_follower   # フォロー機能
 

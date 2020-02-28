@@ -5,7 +5,7 @@
       = link_to "HOME", root_path, class: 'btn upbtn'
     %h1
       = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn upbtn'
-    = form_for(current_user) do |f|
+    =form_for(current_user) do |f|
       .field-input
         = f.text_field :name, autofocus: true, class: 'form'
         .form__mask
@@ -17,4 +17,4 @@
       .field-input
         = f.text_field :content, placeholder:"自己紹介", class: 'form'
       .actions
-        = f.submit "保存", class: 'btn lowbtn'
+        = f.submit "更新", class: 'btn lowbtn'
