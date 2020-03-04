@@ -28,8 +28,8 @@ describe User do
       expect(build(:user,password:"0000000",password_confirmation: "0000001")).to_not be_valid 
     end
 
-    it "passwordが6文字以下であれば登録できない" do
-      expect(build(:user, password: "000000", password_confirmation: "000000")).to_not be_valid 
+    it "passwordが5文字以下であれば登録できない" do
+      expect(build(:user, password: "00000", password_confirmation: "00000")).to_not be_valid 
     end
 
   end
