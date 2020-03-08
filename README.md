@@ -21,7 +21,7 @@
 
 <img width="1280" alt="timedemo3" src="https://user-images.githubusercontent.com/59483718/76161944-77fa8580-617b-11ea-93d0-7906c7d814ef.png">
 
-![demo](https://raw.github.com/wiki/Shuntaro11/line-sample/images/timegif1.mp4)
+<img width="1280" alt="timedemo3" src="https://user-images.githubusercontent.com/59483718/76162269-6d41ef80-617f-11ea-9c7d-75e731ad4e33.jpg">
 
 ## ER図
 <img width="742" alt="timeerd" src="https://user-images.githubusercontent.com/59483718/76161915-294ceb80-617b-11ea-9971-225504012183.png">
