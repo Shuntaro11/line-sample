@@ -62,9 +62,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower'
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'devise'
 gem 'font-awesome-sass'
 gem 'haml-rails'
-gem 'mini_magick'
 gem 'pry-rails'
+gem 'fog-aws'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
