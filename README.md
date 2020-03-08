@@ -10,7 +10,7 @@
 - グループ機能
 - 非同期通信での送信、更新
 
-## ログインパスワード
+## お試し用ログインパスワード
 - email：gest@gmail.com
 - password：gestgest
 
