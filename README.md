@@ -11,11 +11,8 @@
 - 非同期通信での送信、更新
 
 ## ログインパスワード
-email：gest@gmail.com
-password：gestgest
-
-## ER図
-<img width="742" alt="timeerd" src="https://user-images.githubusercontent.com/59483718/76161915-294ceb80-617b-11ea-9971-225504012183.png">
+- email：gest@gmail.com
+- password：gestgest
 
 ## デモイメージ
 <img width="1280" alt="timedemo1" src="https://user-images.githubusercontent.com/59483718/76161931-57323000-617b-11ea-8cac-723aa2281fb5.png">
@@ -24,9 +21,11 @@ password：gestgest
 
 <img width="1280" alt="timedemo3" src="https://user-images.githubusercontent.com/59483718/76161944-77fa8580-617b-11ea-93d0-7906c7d814ef.png">
 
+## ER図
+<img width="742" alt="timeerd" src="https://user-images.githubusercontent.com/59483718/76161915-294ceb80-617b-11ea-9971-225504012183.png">
 
-# TIME-SNS DB設計
-## usersテーブル
+## TIME-SNS DB設計
+### usersテーブル
 Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -34,7 +33,7 @@ Column|Type|Options|
 |password|string|null: false|
 |image|string|
 |content|text|
-### Association
+#### Association
 - has_many :group_users
 - has_many :groups, through:  :group_users
 - has_many :groupmessages
@@ -43,69 +42,69 @@ Column|Type|Options|
 - has_many :directmessages
 - has_many :follows
 
-## groupsテーブル
+### groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |image|string|
-### Association
+#### Association
 - has_many :group_users
 - has_many :users, through:  :group_users
 - has_many :groupmessages
 
-## group_usersテーブル
+### group_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-### Association
+#### Association
 - belongs_to :user
 - belongs_to :group
 
-## groupmessagesテーブル
+### groupmessagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string|
 |content|text|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-### Association
+#### Association
 - belongs_to :user
 - belongs_to : group
 
-## friendsテーブル
+### friendsテーブル
 |Column|Type|Options|
 |------|----|-------|
-### Association
+#### Association
 - has_many :friend_users
 - has_many :users, through:  :friend_users
 - has_many :directmessages
 
-## friend_usersテーブル
+### friend_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |friend_id|integer|null: false, foreign_key: true|
-### Association
+#### Association
 - belongs_to :user
 - belongs_to :friend
 
-## directmessagesテーブル
+### directmessagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string|
 |content|text|
 |user_id|integer|null: false, foreign_key: true|
 |friend_id|integer|null: false, foreign_key: true|
-### Association
+#### Association
 - belongs_to :user
 - belongs_to :friend
 
-## followsテーブル
+### followsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |followable_id|integer|null: false, foreign_key: true|
 |follower_id|integer|null: false, foreign_key: true|
-### Association
+#### Association
 - belongs_to :followable
 - belongs_to :follower
