@@ -13,6 +13,7 @@
 ## お試し用ログインパスワード
 - email：gest@gmail.com
 - password：gestgest
+- アプリURL https://timesns.herokuapp.com/
 
 ## デモイメージ
 <img width="1280" alt="timedemo1" src="https://user-images.githubusercontent.com/59483718/76161931-57323000-617b-11ea-8cac-723aa2281fb5.png">
