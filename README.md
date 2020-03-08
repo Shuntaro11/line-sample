@@ -24,6 +24,8 @@
 
 <img width="1280" alt="timedemo3" src="https://user-images.githubusercontent.com/59483718/76162269-6d41ef80-617f-11ea-9c7d-75e731ad4e33.jpg">
 
+<img width="1280" alt="timedemo5" src="https://user-images.githubusercontent.com/59483718/76162377-7f705d80-6180-11ea-963c-8b4a4730a415.png">
+
 ## ER図
 <img width="742" alt="timeerd" src="https://user-images.githubusercontent.com/59483718/76161915-294ceb80-617b-11ea-9971-225504012183.png">
 
