@@ -5,10 +5,25 @@
 ## 説明
 
 - メッセージ機能
-- フレンド検索機能
+- メールアドレスでのフレンド検索機能
 - フォロー機能
 - グループ機能
 - 非同期通信での送信、更新
+
+## ログインパスワード
+email：gest@gmail.com
+password：gestgest
+
+## ER図
+<img width="742" alt="timeerd" src="https://user-images.githubusercontent.com/59483718/76161915-294ceb80-617b-11ea-9971-225504012183.png">
+
+## デモイメージ
+<img width="1280" alt="timedemo1" src="https://user-images.githubusercontent.com/59483718/76161931-57323000-617b-11ea-8cac-723aa2281fb5.png">
+
+<img width="1280" alt="timedemo1" src="https://user-images.githubusercontent.com/59483718/76161935-631df200-617b-11ea-9b21-a981267a607c.jpg">
+
+<img width="1280" alt="timedemo3" src="https://user-images.githubusercontent.com/59483718/76161944-77fa8580-617b-11ea-93d0-7906c7d814ef.png">
+
 
 # TIME-SNS DB設計
 ## usersテーブル
