@@ -1,19 +1,31 @@
 # TIME-SNS
-
-現代風SNSアプリ :envelope:
+現代風SNSアプリ
 
 ## 説明
-
-- メッセージ機能
-- メールアドレスでのフレンド検索機能
-- フォロー機能
-- グループ機能
-- 非同期通信での送信、更新
+友達とのダイレクトメッセージやグループでのチャットが楽しめる！
 
 ## お試し用ログインパスワード
 - email：gest@gmail.com
 - password：gestgest
 - アプリURL https://timesns.herokuapp.com/
+
+## 実装した機能
+
+- ログイン機能
+- 非同期通信でのメッセージ送信
+- 非同期通信での最新メッセージ更新
+- ページネーション
+- フォロー機能
+- メールアドレスでのフレンド検索機能
+- グループ機能
+
+## 使用した技術
+
+- Haml, SCSS(フロント)
+- Ruby on rails, jQuery(サーバー)
+- mySQL(データベース)
+- Heroku(デプロイ)
+- S3(本番環境の画像保存先)
 
 ## デモイメージ
 <img width="1280" alt="timedemo1" src="https://user-images.githubusercontent.com/59483718/76161931-57323000-617b-11ea-8cac-723aa2281fb5.png">
