@@ -24,6 +24,7 @@
 - Haml, SCSS(フロント)
 - Ruby on rails, jQuery(サーバー)
 - mySQL(データベース)
+- rspecによるモデル、コントローラーの単体テスト(異常値も含む)
 - Heroku(デプロイ)
 - S3(本番環境の画像保存先)
 
