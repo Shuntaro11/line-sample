@@ -25,6 +25,7 @@
 - Ruby on rails, jQuery(サーバー)
 - mySQL(データベース)
 - rspecによるモデル、コントローラーの単体テスト(異常値も含む)
+- Rubocopによるコード解析
 - Heroku(デプロイ)
 - S3(本番環境の画像保存先)
 
