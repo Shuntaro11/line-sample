@@ -18,3 +18,7 @@
           = icon('far', 'trash-alt')
     .lower-box
       .text-box
+        MEMBER : 
+        .text-introduction
+          -@group.users.each do |user|
+            %p #{user.name}

@@ -364,9 +364,17 @@ body{
           text-align: top;
           color: #696969;
           font-size: 20px;
+          font-weight: bold;
           .text-introduction{
             color: #3f3f3f;
-            font-size: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            flex-wrap: wrap;
+            overflow-x: scroll;
+            p{
+              margin-left: 10px;
+            }
           }
         }
       }
