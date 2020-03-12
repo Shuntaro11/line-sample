@@ -39,12 +39,12 @@ jobs:
             
 workflows:
   version: 2
-  workflows:
+  test_and_deploy:
     jobs:
       - test
       - deploy:
         requires:
-          - test
+          - test:
         filters:
           branches:
             only: master
