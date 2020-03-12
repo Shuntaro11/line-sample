@@ -23,11 +23,13 @@
 
 - Haml, SCSS(フロント)
 - Ruby on rails, jQuery(サーバー)
-- mySQL(データベース)
+- mySQL(ローカル環境・テスト環境のデータベース)
 - rspecによるモデル、コントローラーの単体テスト(異常値も含む)
 - Rubocopによるコード解析
 - CircleCIによるテストの自動化
-- Heroku(デプロイ)
+- master変更時、CircleCIによる自動デプロイ
+- Heroku(本番環境)
+- postgresql(本番環境のデータベース)
 - S3(本番環境の画像保存先)
 
 ## デモイメージ
